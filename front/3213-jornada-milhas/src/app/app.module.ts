@@ -18,6 +18,7 @@ import { CardDepoimentoComponent } from './shared/card-depoimento/card-depoiment
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -26,6 +27,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,6 +37,7 @@ import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
 import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FormularioBaseComponent } from './shared/formulario-base/formulario-base.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +57,11 @@ import { LoginComponent } from './pages/login/login.component';
     DropdownUfComponent,
     SeletorPassageiroComponent,
     DepoimentosComponent,
-    LoginComponent
+    LoginComponent,
+    FormularioBaseComponent
   ],
   imports: [
+    MatRadioModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -74,7 +79,8 @@ import { LoginComponent } from './pages/login/login.component';
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
