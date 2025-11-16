@@ -15,14 +15,16 @@
           <mat-form-field appearance="outline">
             <mat-label>E-mail</mat-label>
             <input formControlName="email" matInput type="email" placeholder="Digite seu e-mail">
+            <mat-error *ngIf="loginForm.get('email')?.errors">Email Invalido</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
             <input formControlName="senha" matInput type="password" placeholder="Digite sua senha">
+            <mat-error *ngIf="loginForm.get('senha')?.errors">Necessario Senha</mat-error>
           </mat-form-field>
         </mat-card-content>
                 <mat-card-actions>
-          <button mat-flat-button color="primary" (click)="login()">
+          <button mat-flat-button color="primary" (click)="login()" [disabled]="loginForm.invalid">
             ACESSAR MINHA CONTA
           </button>
         </mat-card-actions>
